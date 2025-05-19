@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio de Projetos DYF Engenharia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="logo">
+    <img src="https://i.imgur.com/IT5EHOX.png" alt="Logo DYF">
+  </div>
+
+  <nav class="categories" id="navCategories">
+    <button onclick="scrollToSection('arquitetura')">Arquitetura</button>
+    <button onclick="scrollToSection('estrutural')">Estrutural</button>
+    <button onclick="scrollToSection('instalacoes')">Instalações</button>
+    <button onclick="scrollToSection('mecanica')">Mecânica</button>
+    <button onclick="scrollToSection('laudos')">Laudos/Planejamento</button>
+  </nav>
+
+  <div class="section" id="arquitetura">
+    <h2>Arquitetura</h2>
+    <ul class="card-list" id="arquitetura-list"></ul>
+  </div>
+  <div class="section" id="estrutural">
+    <h2>Estrutural</h2>
+    <ul class="card-list" id="estrutural-list"></ul>
+  </div>
+  <div class="section" id="instalacoes">
+    <h2>Instalações</h2>
+    <ul class="card-list" id="instalacoes-list"></ul>
+  </div>
+  <div class="section" id="mecanica">
+    <h2>Mecânica</h2>
+    <ul class="card-list" id="mecanica-list"></ul>
+  </div>
+  <div class="section" id="laudos">
+    <h2>Laudos e Planejamento</h2>
+    <ul class="card-list" id="laudos-list"></ul>
+  </div>
+
+  <!-- Rodapé fixo com resumo do pedido -->
+  <div id="pedido-fixo" style="display:none;">
+    <span class="resumo" id="pedido-resumo"></span>
+    <button id="finalizar-btn" onclick="abrirModal()">Finalizar Pedido</button>
+  </div>
+
+  <!-- Modal para nome/cidade -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <h3>Finalizar Pedido</h3>
+      <label for="nome">Nome completo</label>
+      <input id="nome" type="text" placeholder="Digite seu nome">
+      <label for="cidade">Cidade</label>
+      <input id="cidade" type="text" placeholder="Sua cidade">
+      <button class="btn" onclick="enviarPedidoWhatsApp()">Enviar Pedido</button>
+      <button class="btn-cancel" onclick="fecharModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
